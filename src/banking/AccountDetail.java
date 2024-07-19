@@ -1,11 +1,21 @@
 package banking;
 
 public class AccountDetail {
-    String accountNumber;
-    String accountHolderName;
-     long accountBalance;
+    private  String accountNumber;
+    private String accountHolderName;
+     private long accountBalance;
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
 
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    public long getAccountBalance() {
+        return accountBalance;
+    }
 
     public AccountDetail(String accountNumber, String accountHolderName, long accountBalance) {
         this.accountNumber = accountNumber;
@@ -24,5 +34,6 @@ public class AccountDetail {
         }
         return amount;
     }
+
 }
 
