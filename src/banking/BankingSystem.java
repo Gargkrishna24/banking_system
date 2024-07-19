@@ -1,16 +1,10 @@
 package banking;
 import java.util.Scanner;
-import banking.AccountDetail;
 
-class bankingSystem implements BankOperation {
+class BankingSystem implements BankOperation {
      AccountDetail accountHolder;
      int numberOfAccounts;
 
-    public bankingSystem(AccountDetail accountHolder) {
-        this.accountHolder = accountHolder;
-        this.numberOfAccounts=0;
-
-    }
 
     @Override
     public void accountDetail() {
@@ -33,7 +27,15 @@ class bankingSystem implements BankOperation {
         String givenAccountNumber = scanner.next();
         AccountDetail accountDetail = new AccountDetail("221356456","mukund bansal",2);
         String provideAccountNumber = accountDetail.getAccountNumber();
-        if(givenAccountNumber.equals(AccountNumber)){
+        if(givenAccountNumber.equals(provideAccountNumber)){
+            System.out.println("Account already existed");
+        }else {
+            System.out.println("Enter Account Holder Name : ");
+            String name = scanner.next();
+            long number = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
+            String str = String.valueOf(number);
+            AccountDetail newCustomer = accountHolder;
+
 
         }
 
